@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block head_title %}Home page{% endblock head_title %}
+{% block content %}
+<h1>I am adding this to body from home</h1>
+
+{{block.super}}
+{% comment %} {% if request.user.is_authenticated %}
+    you are user LoggedIn
+    {% else %}
+    user are not logged in
+    {% endif %} {% endcomment %}
+{% include "snippets/welcome-user.msg.html" %}
+    {% endblock content %}
